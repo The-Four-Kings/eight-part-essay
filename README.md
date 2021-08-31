@@ -1,4 +1,4 @@
-# The developer eight-part essay
+# The Developer Eight-part Essay
 
 技术开发八股文
 
