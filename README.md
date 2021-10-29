@@ -8,4 +8,4 @@
 
 ## [Design Patterns 设计模式](src/design-patterns/README.md)
 
-## [Programming Paradigms 编程范式](src/programming-paradigms/README.MD)
+## [Programming Paradigms 编程范式](src/programming-paradigms/README. MD)

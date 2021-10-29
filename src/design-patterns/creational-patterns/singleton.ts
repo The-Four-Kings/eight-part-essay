@@ -25,12 +25,12 @@ export default function singleton<T>() {
 
 /**
  * @author 雪糕
- * @description 可继承的范型单例基类 getInstance() 版本
+ * @description 可继承的范型单例基类 getIns() 版本
  */
 export class Singleton {
     protected static _instance: Singleton;
 
-    public static getInstance<T extends typeof Singleton>(this: T): InstanceType<T> {
+    public static getIns<T extends typeof Singleton>(this: T): InstanceType<T> {
         if (!this._instance) {
             this._instance = new this(true);
         }

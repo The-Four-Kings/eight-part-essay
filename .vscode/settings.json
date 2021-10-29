@@ -2,8 +2,7 @@
     "files.exclude": {
         "**/node_modules": true
     },
-    "eslint.alwaysShowStatus": true,
-    "eslint.run": "onSave",
-    "testFileMagic.testDirectory": "__tests__",
-    "testFileMagic.testKeyword": "spec",
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
 }

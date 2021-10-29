@@ -1,4 +1,4 @@
-import singleton, { Singleton } from "@/design-patterns/creational-patterns/singleton";
+import singleton, { Singleton } from '@/design-patterns/creational-patterns/singleton';
 
 class Test_SingletonFn extends singleton<Test_SingletonFn>() { }
 
@@ -13,8 +13,8 @@ describe('singleton UNIT', () => {
     });
 
     test('Singleton class', () => {
-        const s1 = Test_Singleton.getInstance();
-        const s2 = Test_Singleton.getInstance();
+        const s1 = Test_Singleton.getIns();
+        const s2 = Test_Singleton.getIns();
         expect(s1).toBe(s2);
     });
 });

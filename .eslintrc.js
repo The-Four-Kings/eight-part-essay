@@ -1,7 +1,3 @@
-/**
- * @author 雪糕
- * @description
- */
 module.exports = {
     "env": {
         "browser": true,
