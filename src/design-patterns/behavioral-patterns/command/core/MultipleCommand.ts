@@ -1,10 +1,10 @@
-import { Command } from './Command';
+import Command from './Command';
 import { createCmdQueue } from './utils';
 
 /** 
  * @Description 复合型命令 里面有多条命令 可以用在多选什么批量命令上
  */
-export class MultipleCommand extends Command {
+export default class MultipleCommand extends Command {
 
     protected cmdQueue: ICommand[];
 

@@ -3,7 +3,7 @@ import { createCmdQueue } from './utils';
 /**
  * 命令管理者
  */
-export class Invoker {
+export default abstract class Invoker {
     private _pendingCmdQueue: ICommand[];  //预处理命令队列
     private _executedCmdDeque: ICommand[];   //已执行命令双端队列
     private _undoCmdStack: ICommand[];   //撤销命令栈

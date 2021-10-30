@@ -1,5 +1,4 @@
-import { Command } from '@/design-patterns/behavioral-patterns/command/Command';
-
+import Command from '../core/Command';
 import CalculateModel from './CalculateModel';
 
 /** 

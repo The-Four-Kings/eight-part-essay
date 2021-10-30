@@ -1,7 +1,7 @@
 /**
  * @abstract 命令抽象类
  */
-export abstract class Command implements ICommand {
+export default abstract class Command implements ICommand {
     protected executed: boolean;
     public constructor(..._: unknown[]) {
         //
