@@ -2,7 +2,7 @@
 
 ## [Command Pattern 命令模式](command/README.md)
 
-## State Pattern 状态模式
+## [State Pattern 状态模式](state/README.md)
 
 ## Observer Pattern 观察者模式
 
