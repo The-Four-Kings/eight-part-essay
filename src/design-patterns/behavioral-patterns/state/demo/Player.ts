@@ -33,7 +33,7 @@ export default class Player {
         this._stateCtrl.enter(PlayerDefenseState);
     }
 
-    /** 防御 */
+    /** 待机 */
     public idle(): void {
         this._stateCtrl.enter(PlayerIdleState);
     }
