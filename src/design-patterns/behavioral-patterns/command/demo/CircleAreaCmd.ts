@@ -1,5 +1,4 @@
-import { MultipleCommand } from '@/design-patterns/behavioral-patterns/command/MultipleCommand';
-
+import MultipleCommand from '../core/MultipleCommand';
 import AssignCmd from './AssignCmd';
 import MultiplyCmd from './MultiplyCmd';
 import PowCmd from './PowCmd';

@@ -1,5 +1,4 @@
-import { ComplexCommand } from '@/design-patterns/behavioral-patterns/command/ComplexCommand';
-
+import ComplexCommand from '../core/ComplexCommand';
 import PythagoreanLongSideReceiver from './PythagoreanLongSideReceiver';
 
 /** 勾股定理最长边 */

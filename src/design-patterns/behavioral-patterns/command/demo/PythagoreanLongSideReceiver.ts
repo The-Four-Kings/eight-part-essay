@@ -1,5 +1,4 @@
-import { Receiver } from '@/design-patterns/behavioral-patterns/command/Receiver';
-
+import Receiver from '../core/Receiver';
 import CalculateModel from './CalculateModel';
 
 /** 勾股定理最长边执行者 */
