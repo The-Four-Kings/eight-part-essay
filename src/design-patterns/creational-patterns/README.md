@@ -2,7 +2,7 @@
 
 ## Prototype Pattern 原型模式
 
-## [Singleton Pattern 单例模式](singleton.ts)
+## [Singleton Pattern 单例模式](singleton/README.md)
 
 ## Abstract Factory Pattern 抽象工厂模式
 
