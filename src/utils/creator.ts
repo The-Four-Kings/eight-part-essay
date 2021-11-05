@@ -1,4 +1,4 @@
-import { BinaryTree, tNext } from "../algorithms/struct/tree";
+import { BinaryTree, tNext } from '../algorithms/struct/tree';
 
 /**
  * @author 雪糕
@@ -35,3 +35,7 @@ export function genBinaryTree(len: number, randomLen?: number, nextType: tNext =
     }
     return tree;
 }
+
+export const createObject = <T>(C: new (...param: Array<unknown>) => T, properties?: Partial<T>, ...param: unknown[]): T => {
+    return Object.assign(new C(...param), properties);
+};

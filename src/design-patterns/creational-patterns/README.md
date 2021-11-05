@@ -1,8 +1,8 @@
 # Creational Patterns 创建型模式
 
-## Prototype Pattern 原型模式
+## [Prototype Pattern 原型模式](prototype/README.md)
 
-## [Singleton Pattern 单例模式](singleton.ts)
+## [Singleton Pattern 单例模式](singleton/README.md)
 
 ## Abstract Factory Pattern 抽象工厂模式
 
