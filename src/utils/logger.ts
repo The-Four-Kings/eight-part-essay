@@ -1,22 +1,86 @@
-import { configure, getLogger } from 'log4js';
-import * as fse from "fs-extra";
-import { Logger } from '@/typings/logger';
+/* eslint-disable no-console */
+import chalk from 'chalk';
+import figures from 'figures';
 
-const path = `${process.cwd()}/essays.log`;
-if (fse.existsSync(path)) {
-    fse.unlinkSync(path);
+const { green, grey, red, underline, yellow } = chalk;
+let isEnabled: boolean = true;
+function setEnabled(value: boolean) {
+    isEnabled = value;
 }
 
-const logger = getLogger("essays");
-configure({
-    appenders: {
-        essays: { type: "file", filename: "essays.log" },
-        console: { type: "console" }
-    },
-    categories: {
-        default: { appenders: ["console"], level: "all" },
-        essays: { appenders: ["console", "essays"], level: "all" }
-    },
-});
+let isTimeEnabled: boolean = true;
+function setTimeEnabled(value: boolean) {
+    isTimeEnabled = value;
+}
 
-export default logger as Logger;
+function baseConsole(consoleOption: IConsoleOption, message: string, ...optionalParams: unknown[]) {
+    if (!isEnabled) return;
+
+    if (isTimeEnabled) {
+        const date = new Date();
+        const dateStr = [date.getFullYear(), date.getMonth() + 1, date.getDate()].join('-') + [date.getHours(), date.getMinutes(), date.getSeconds()].join(':');
+        message = `${dateStr} ${message}`;
+    }
+
+    const { consoleFn, colorFn, badge } = consoleOption;
+    if (badge) {
+        message = `${badge} ${message}`;
+    }
+
+    if (colorFn) {
+        consoleFn(colorFn(message, ...optionalParams));
+    } else {
+        consoleFn(message, ...optionalParams);
+    }
+}
+
+function log(message: string, ...optionalParams: unknown[]) {
+    baseConsole(
+        {
+            consoleFn: console.log,
+            colorFn: grey
+        },
+        message, ...optionalParams
+    );
+}
+
+function success(message: string, ...optionalParams: unknown[]) {
+    baseConsole(
+        {
+            consoleFn: console.log,
+            colorFn: green,
+            badge: figures.tick
+        },
+        message, ...optionalParams
+    );
+}
+
+function error(message: string, ...optionalParams: unknown[]) {
+    baseConsole(
+        {
+            consoleFn: console.error,
+            colorFn: red,
+            badge: figures.cross
+        },
+        message, ...optionalParams
+    );
+}
+
+function warn(message: string, ...optionalParams: unknown[]) {
+    baseConsole(
+        {
+            consoleFn: console.warn,
+            colorFn: yellow,
+            badge: figures.warning
+        },
+        message, ...optionalParams
+    );
+}
+
+export default { setEnabled, log, error, warn, success };
+
+interface IConsoleOption {
+    consoleFn: (...data: Array<unknown>) => void,
+    colorFn?: (...text: unknown[]) => string,
+    badge?: string
+}

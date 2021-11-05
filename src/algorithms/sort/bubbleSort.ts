@@ -1,4 +1,4 @@
-import logger from "@/utils/logger";
+import logger from '@/utils/logger';
 
 /** 冒泡排序 */
 export function bubbleSort(arr: number[]): number[] {
@@ -14,7 +14,7 @@ export function bubbleSort(arr: number[]): number[] {
             count++;
         }
     }
-    logger.trace(`bubbleSort count:${count}`);
+    logger.log(`bubbleSort count:${count}`);
 
     return arr;
 }
@@ -32,7 +32,7 @@ export function bubbleSort1(arr: number[]): number[] {
             count++;
         }
     }
-    logger.trace(`bubbleSort count:${count}`);
+    logger.log(`bubbleSort count:${count}`);
 
     return arr;
 }

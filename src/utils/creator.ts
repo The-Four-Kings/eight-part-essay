@@ -1,4 +1,4 @@
-import { BinaryTree, tNext } from '../algorithms/struct/tree';
+import { BinaryTree, TNext } from '../algorithms/struct/tree';
 
 /**
  * @author 雪糕
@@ -27,7 +27,7 @@ export function creatArray(len: number, randomLen?: number): number[] {
  * @param nextType 
  * @returns 二叉树实例
  */
-export function genBinaryTree(len: number, randomLen?: number, nextType: tNext = "parent"): BinaryTree {
+export function genBinaryTree(len: number, randomLen?: number, nextType: TNext = "parent"): BinaryTree {
     const tree = new BinaryTree();
     const arr = creatArray(len, randomLen);
     for (let i = 0; i < arr.length; i++) {
