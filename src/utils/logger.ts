@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 import chalk from 'chalk';
-import figures from 'figures';
+
+// import figures from 'figures';
 
 const { green, grey, red, underline, yellow } = chalk;
 let isEnabled: boolean = true;
@@ -49,7 +50,7 @@ function success(message: string, ...optionalParams: unknown[]) {
         {
             consoleFn: console.log,
             colorFn: green,
-            badge: figures.tick
+            // badge: figures.tick
         },
         message, ...optionalParams
     );
@@ -60,7 +61,7 @@ function error(message: string, ...optionalParams: unknown[]) {
         {
             consoleFn: console.error,
             colorFn: red,
-            badge: figures.cross
+            // badge: figures.cross
         },
         message, ...optionalParams
     );
@@ -71,7 +72,7 @@ function warn(message: string, ...optionalParams: unknown[]) {
         {
             consoleFn: console.warn,
             colorFn: yellow,
-            badge: figures.warning
+            // badge: figures.warning
         },
         message, ...optionalParams
     );

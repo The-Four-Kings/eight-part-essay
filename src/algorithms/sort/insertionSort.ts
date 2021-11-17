@@ -1,4 +1,4 @@
-import logger from '@/utils/logger';
+import logger from 'src/utils/logger';
 
 /** 插入排序 */
 export function insertionSort(arr: number[]): number[] {

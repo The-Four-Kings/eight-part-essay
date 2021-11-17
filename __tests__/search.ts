@@ -1,9 +1,9 @@
 import { performance } from 'perf_hooks';
 
-import { insertionSearch } from '@/algorithms/search/insertionSearch';
-import { quickSort } from '@/algorithms/sort/quickSort';
-import { creatArray } from '@/utils/creator';
-import logger from '@/utils/logger';
+import { insertionSearch } from '../src/algorithms/search/insertionSearch';
+import { quickSort } from '../src/algorithms/sort/quickSort';
+import { creatArray } from '../src/utils/creator';
+import logger from '../src/utils/logger';
 
 function search(arr: number[], searchFn: (_: number[], __: number) => number, val: number, sort?: boolean): void {
     if (sort) {

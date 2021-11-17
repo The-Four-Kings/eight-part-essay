@@ -3,13 +3,13 @@
  * @description 状态模式测试用例
  */
 
-import Player from '@/design-patterns/behavioral-patterns/state/demo/Player';
-import PlayerAttackState from '@/design-patterns/behavioral-patterns/state/demo/PlayerAttackState';
-import PlayerDefenseState from '@/design-patterns/behavioral-patterns/state/demo/PlayerDefenseState';
-import PlayerIdleState from '@/design-patterns/behavioral-patterns/state/demo/PlayerIdleState';
-import PlayerJumpState from '@/design-patterns/behavioral-patterns/state/demo/PlayerJumpState';
-import PlayerRunState from '@/design-patterns/behavioral-patterns/state/demo/PlayerRunState';
-import PlayerWalkState from '@/design-patterns/behavioral-patterns/state/demo/PlayerWalkState';
+import Player from '../../../src/design-patterns/behavioral-patterns/state/demo/Player';
+import PlayerAttackState from '../../../src/design-patterns/behavioral-patterns/state/demo/PlayerAttackState';
+import PlayerDefenseState from '../../../src/design-patterns/behavioral-patterns/state/demo/PlayerDefenseState';
+import PlayerIdleState from '../../../src/design-patterns/behavioral-patterns/state/demo/PlayerIdleState';
+import PlayerJumpState from '../../../src/design-patterns/behavioral-patterns/state/demo/PlayerJumpState';
+import PlayerRunState from '../../../src/design-patterns/behavioral-patterns/state/demo/PlayerRunState';
+import PlayerWalkState from '../../../src/design-patterns/behavioral-patterns/state/demo/PlayerWalkState';
 
 describe('state player', () => {
     const player = new Player();

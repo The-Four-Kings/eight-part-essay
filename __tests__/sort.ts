@@ -1,21 +1,22 @@
 import { performance } from 'perf_hooks';
 
-import { heapSort } from '@/algorithms/sort/heapSort';
-import { creatArray } from '@/utils/creator';
+import { heapSort } from '../src/algorithms/sort/heapSort';
+import { creatArray } from '../src/utils/creator';
+import logger from '../src/utils/logger';
 
 function sort(arr: number[], sortFn: (_: number[]) => number[]): void {
     const len = arr.length;
     const beforeTime = performance.now();
-    console.log(`${sortFn.name} before arr:`, arr);
+    logger.log(`${sortFn.name} before arr:`, arr);
     arr = sortFn(arr);
     const afterTime = performance.now();
-    console.log(`${sortFn.name} after arr:`, arr);
-    console.log(`${sortFn.name} cost time: ${afterTime - beforeTime}ms`);
+    logger.log(`${sortFn.name} after arr:`, arr);
+    logger.log(`${sortFn.name} cost time: ${afterTime - beforeTime}ms`);
 
     if (check(arr, len)) {
-        console.info(`${sortFn.name} success`);
+        logger.log(`${sortFn.name} success`);
     } else {
-        console.error(`${sortFn.name} failed`);
+        logger.error(`${sortFn.name} failed`);
     }
 }
 

@@ -1,4 +1,7 @@
-import PoolMgr, { IPoolObject, IPoolObjectConstructor } from "@/design-patterns/game-patterns/pool";
+import PoolMgr, {
+    IPoolObject,
+    IPoolObjectConstructor
+} from '../../../src/design-patterns/game-patterns/pool/pool';
 
 class Test_PoolMgr extends PoolMgr {
     public getPoolObjectSize<T extends IPoolObject>(C: IPoolObjectConstructor<T>, keyPrefix?: string): number {
