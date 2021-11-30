@@ -14,6 +14,6 @@
 
 ## Data Locality Pattern 数据局部性模式
 
-## Dirty Flag Pattern 脏标记模式
+## [Dirty Flag Pattern 脏标记模式](dirtyFlag/README.md)
 
 ## [Object Pool Pattern 对象池模式](pool/README.md)
