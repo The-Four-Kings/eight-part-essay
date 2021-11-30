@@ -1,17 +1,15 @@
 ###
  # @author 雪糕
- # @description 
+ # @description 编译指定文件夹 index.ts 文件
 ### 
 function compileFile(){
     folderPath=$1
-    # echo "这是我的第一个 shell 函数!"
-    htmlPath=$(pwd)"$folderPath"'index.html' 
-    tsPath=$(pwd)"$folderPath"'index.ts'
-    tempPath=$(pwd)"$folderPath"'temp.js'
-    jsPath=$(pwd)"$folderPath"'index.js'
+    tsPath=$(pwd)"/src/$folderPath"'index.ts'
+    outDir=$(pwd)"/output/$folderPath"
+    tempPath=$outDir'/temp.js'
+    jsPath=$outDir'/index.js'
 
-    tsc --target es5 "$tsPath"
-    # npm run browserify -- "$jsPath" > "$tempPath"
+    tsc --target es5 --outDir "output" "$tsPath"
     browserify "$jsPath" > "$tempPath"
     rm "$jsPath"
     mv "$tempPath" "$jsPath"

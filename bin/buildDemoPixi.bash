@@ -4,4 +4,4 @@
 ###
 source ./bin/compile.bash
 
-compileFile '/src/engine/pixi/demo/'
+compileFile 'engine/pixi/demo/'

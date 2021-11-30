@@ -1,12 +1,13 @@
 import * as PIXI from 'pixi.js';
 
+import { img_bunny } from '../../../config/imageCfg';
 import PixiMgr from '../core/PixiMgr';
 
 PixiMgr.init();
 const { root, app } = PixiMgr;
 
 // Create a new texture
-const texture = PIXI.Texture.from('bunny.png');
+const texture = PIXI.Texture.from(img_bunny);
 
 // Create a 5x5 grid of bunnies
 for (let i = 0; i < 25; i++) {

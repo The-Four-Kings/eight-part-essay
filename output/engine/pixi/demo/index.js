@@ -43306,6 +43306,19 @@ module.exports = Promise;
 
 }).call(this)}).call(this,require("timers").setImmediate)
 },{"timers":6}],51:[function(require,module,exports){
+(function (__dirname){(function (){
+"use strict";
+/**
+ * @author 雪糕
+ * @description
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.img_bunny = void 0;
+var imageFolderPath = __dirname + "/../../resource/image";
+exports.img_bunny = imageFolderPath + "/bunny.png";
+
+}).call(this)}).call(this,"/output/config")
+},{}],52:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Singleton = void 0;
@@ -43356,7 +43369,7 @@ var Singleton = /** @class */ (function () {
 }());
 exports.Singleton = Singleton;
 
-},{}],52:[function(require,module,exports){
+},{}],53:[function(require,module,exports){
 "use strict";
 /**
  * @author 雪糕
@@ -43410,15 +43423,16 @@ var PixiMgr = /** @class */ (function (_super) {
 }(singleton_1.Singleton));
 exports.default = PixiMgr.getIns();
 
-},{"../../../design-patterns/creational-patterns/singleton/singleton":51,"pixi.js":49}],53:[function(require,module,exports){
+},{"../../../design-patterns/creational-patterns/singleton/singleton":52,"pixi.js":49}],54:[function(require,module,exports){
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var PIXI = require("pixi.js");
+var imageCfg_1 = require("../../../config/imageCfg");
 var PixiMgr_1 = require("../core/PixiMgr");
 PixiMgr_1.default.init();
 var root = PixiMgr_1.default.root, app = PixiMgr_1.default.app;
 // Create a new texture
-var texture = PIXI.Texture.from('bunny.png');
+var texture = PIXI.Texture.from(imageCfg_1.img_bunny);
 // Create a 5x5 grid of bunnies
 for (var i = 0; i < 25; i++) {
     var bunny = new PIXI.Sprite(texture);
@@ -43440,4 +43454,4 @@ app.ticker.add(function (delta) {
     root.rotation -= 0.01 * delta;
 });
 
-},{"../core/PixiMgr":52,"pixi.js":49}]},{},[53]);
+},{"../../../config/imageCfg":51,"../core/PixiMgr":53,"pixi.js":49}]},{},[54]);
