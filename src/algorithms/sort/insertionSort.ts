@@ -1,4 +1,4 @@
-import logger from "@/utils/logger";
+import logger from 'src/utils/logger';
 
 /** 插入排序 */
 export function insertionSort(arr: number[]): number[] {
@@ -17,7 +17,7 @@ export function insertionSort(arr: number[]): number[] {
         arr[preIndex + 1] = arr[i];
     }
 
-    logger.trace(`count: ${count}`);
+    logger.log(`count: ${count}`);
 
     return arr;
 }
@@ -38,7 +38,7 @@ export function insertionSort1(arr: number[]): number[] {
         arr[preIndex] = arr[i];
     }
 
-    logger.trace(`count: ${count}`);
+    logger.log(`count: ${count}`);
 
     return arr;
 }

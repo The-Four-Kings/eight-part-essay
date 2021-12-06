@@ -1,24 +1,20 @@
 import { performance } from 'perf_hooks';
-import { creatArray } from '@/utils/creator';
-import logger from '@/utils/logger';
-import { bubbleSort, bubbleSort1 } from '@/algorithms/sort/bubbleSort';
-import { heapSort } from '@/algorithms/sort/heapSort';
-import { insertionSort, insertionSort1 } from '@/algorithms/sort/insertionSort';
-import { mergeSort } from '@/algorithms/sort/mergeSort';
-import { quickSort } from '@/algorithms/sort/quickSort';
-import { selectionSort } from '@/algorithms/sort/selectionSort';
+
+import { heapSort } from '../src/algorithms/sort/heapSort';
+import { creatArray } from '../src/utils/creator';
+import logger from '../src/utils/logger';
 
 function sort(arr: number[], sortFn: (_: number[]) => number[]): void {
     const len = arr.length;
     const beforeTime = performance.now();
-    logger.trace(`${sortFn.name} before arr:`, arr);
+    logger.log(`${sortFn.name} before arr:`, arr);
     arr = sortFn(arr);
     const afterTime = performance.now();
-    logger.trace(`${sortFn.name} after arr:`, arr);
-    logger.trace(`${sortFn.name} cost time: ${afterTime - beforeTime}ms`);
+    logger.log(`${sortFn.name} after arr:`, arr);
+    logger.log(`${sortFn.name} cost time: ${afterTime - beforeTime}ms`);
 
     if (check(arr, len)) {
-        logger.info(`${sortFn.name} success`);
+        logger.log(`${sortFn.name} success`);
     } else {
         logger.error(`${sortFn.name} failed`);
     }

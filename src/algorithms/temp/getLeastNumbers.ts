@@ -1,4 +1,4 @@
-import logger from "@/utils/logger";
+import logger from '../../utils/logger';
 
 export function GetLeastNumbers_Solution(input: number[], k: number): number[] {
     // write code here
@@ -40,4 +40,4 @@ function partition(arr: number[], low: number, high: number): number {
 }
 
 const result = GetLeastNumbers_Solution([4, 5, 1, 6, 2, 7, 3, 8], 4);
-logger.trace(`result:`, result);
+logger.log(`result:`, result);

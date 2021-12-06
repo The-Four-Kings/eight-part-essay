@@ -1,5 +1,6 @@
-import logger from "@/utils/logger";
-import { TreeNode } from "../struct/tree";
+
+import logger from '../../utils/logger';
+import { TreeNode } from '../struct/tree';
 
 /**
  * 假设有二叉树如下：
@@ -39,4 +40,4 @@ function reConstructBinaryTree(pre: number[], vin: number[]): TreeNode {
 }
 
 const result = reConstructBinaryTree([1, 2, 3, 4, 5, 6, 7], [3, 2, 4, 1, 6, 5, 7]);
-logger.trace(`result:`, result);
+logger.log(`result:`, result);

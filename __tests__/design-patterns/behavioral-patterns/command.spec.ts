@@ -1,15 +1,15 @@
-import AddCmd from '@/design-patterns/behavioral-patterns/command/demo/AddCmd';
-import AllClearCmd from '@/design-patterns/behavioral-patterns/command/demo/AllClearCmd';
-import AssignCmd from '@/design-patterns/behavioral-patterns/command/demo/AssignCmd';
-import CalculateModel from '@/design-patterns/behavioral-patterns/command/demo/CalculateModel';
-import Calculator from '@/design-patterns/behavioral-patterns/command/demo/Calculator';
-import CircleAreaCmd from '@/design-patterns/behavioral-patterns/command/demo/CircleAreaCmd';
-import DivideCmd from '@/design-patterns/behavioral-patterns/command/demo/DivideCmd';
-import MultiplyCmd from '@/design-patterns/behavioral-patterns/command/demo/MultiplyCmd';
-import PythagoreanLongSideCmd from '@/design-patterns/behavioral-patterns/command/demo/PythagoreanLongSideCmd';
-import PythagoreanLongSideReceiver from '@/design-patterns/behavioral-patterns/command/demo/PythagoreanLongSideReceiver';
-import SqrtCmd from '@/design-patterns/behavioral-patterns/command/demo/SqrtCmd';
-import SubtractCmd from '@/design-patterns/behavioral-patterns/command/demo/SubtractCmd';
+import AddCmd from '../../../src/design-patterns/behavioral-patterns/command/demo/AddCmd';
+import AllClearCmd from '../../../src/design-patterns/behavioral-patterns/command/demo/AllClearCmd';
+import AssignCmd from '../../../src/design-patterns/behavioral-patterns/command/demo/AssignCmd';
+import CalculateModel from '../../../src/design-patterns/behavioral-patterns/command/demo/CalculateModel';
+import Calculator from '../../../src/design-patterns/behavioral-patterns/command/demo/Calculator';
+import CircleAreaCmd from '../../../src/design-patterns/behavioral-patterns/command/demo/CircleAreaCmd';
+import DivideCmd from '../../../src/design-patterns/behavioral-patterns/command/demo/DivideCmd';
+import MultiplyCmd from '../../../src/design-patterns/behavioral-patterns/command/demo/MultiplyCmd';
+import PythagoreanLongSideCmd from '../../../src/design-patterns/behavioral-patterns/command/demo/PythagoreanLongSideCmd';
+import PythagoreanLongSideReceiver from '../../../src/design-patterns/behavioral-patterns/command/demo/PythagoreanLongSideReceiver';
+import SqrtCmd from '../../../src/design-patterns/behavioral-patterns/command/demo/SqrtCmd';
+import SubtractCmd from '../../../src/design-patterns/behavioral-patterns/command/demo/SubtractCmd';
 
 describe('command calculator', () => {
     const calculator = new Calculator();

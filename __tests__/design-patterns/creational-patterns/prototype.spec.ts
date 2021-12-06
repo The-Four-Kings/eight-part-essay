@@ -1,7 +1,8 @@
-import Circle from '@/design-patterns/creational-patterns/prototype/demo/Circle';
-import Plane from '@/design-patterns/creational-patterns/prototype/demo/Plane';
-import Rectangle from '@/design-patterns/creational-patterns/prototype/demo/Rectangle';
-import { createObject } from '@/utils/creator';
+
+import Circle from '../../../src/design-patterns/creational-patterns/prototype/demo/Circle';
+import Plane from '../../../src/design-patterns/creational-patterns/prototype/demo/Plane';
+import Rectangle from '../../../src/design-patterns/creational-patterns/prototype/demo/Rectangle';
+import { createObject } from '../../../src/utils/creator';
 
 const plane1 = createObject(Plane, {
     x: 10,

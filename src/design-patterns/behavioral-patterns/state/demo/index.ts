@@ -1,6 +1,5 @@
-import logger from '@/utils/logger';
-import { question } from '@/utils/readline';
-
+import logger from '../../../../utils/logger';
+import { question } from '../../../../utils/readline';
 import Player from './Player';
 
 /**

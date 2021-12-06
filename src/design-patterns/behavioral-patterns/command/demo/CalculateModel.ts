@@ -1,4 +1,4 @@
-import { Singleton } from '@/design-patterns/creational-patterns/singleton/singleton';
+import { Singleton } from '../../../creational-patterns/singleton/singleton';
 
 /** 计算器数据 */
 class CalculateModel extends Singleton {
