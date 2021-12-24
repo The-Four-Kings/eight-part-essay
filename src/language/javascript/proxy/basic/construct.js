@@ -1,0 +1,23 @@
+/**
+ * @author 雪糕
+ * @description 拦截 new 操作符
+ * @see https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/construct
+ */
+
+function monster1(disposition) {
+    this.disposition = disposition;
+}
+
+const handler1 = {
+    construct(target, args) {
+        console.log('monster1 constructor called');
+        // expected output: "monster1 constructor called"
+
+        return new target(...args);
+    }
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(new proxy1('fierce').disposition);
+  // expected output: "fierce"
