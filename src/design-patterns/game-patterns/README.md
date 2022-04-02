@@ -8,7 +8,7 @@
 
 ## Event Queue Pattern 事件队列模式
 
-## Game Loop Pattern 游戏循环模式
+## [Game Loop Pattern 游戏循环模式](gameLoop/README.md)
 
 ## Service Locator Pattern 服务定位器模式
 
