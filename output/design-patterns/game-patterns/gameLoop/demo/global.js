@@ -7,6 +7,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var Global = /** @class */ (function () {
     function Global() {
     }
+    Object.defineProperty(Global.prototype, "dirty", {
+        get: function () {
+            return this._dirty;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    Global.prototype.setDirty = function (value) {
+        this._dirty = value;
+    };
     return Global;
 }());
 var global = new Global();
