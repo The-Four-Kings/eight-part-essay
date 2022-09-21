@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var global_1 = require("./global");
 /**
  * @author 雪糕
- * @description
+ * @description 渲染节点
  */
 var GraphicsNode = /** @class */ (function () {
     function GraphicsNode() {
