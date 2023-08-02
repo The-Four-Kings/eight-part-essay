@@ -1,5 +1,8 @@
 import singleton from '../../creational-patterns/singleton/singleton';
 
+export type acquireParameters<T> = T extends { onAcquire: (...params: infer R) => unknown } ? R : never;
+export type releaseParameters<T> = T extends { onRelease: (...params: infer R) => unknown } ? R : never;
+
 /**
  * @author 雪糕
  * @description 对象池管理类
@@ -29,7 +32,7 @@ export default class PoolMgr extends singleton<PoolMgr>() {
      * @param params 取出时传入的动态参数
      * @returns 创建好的实例
      */
-    public acquire<T extends IPoolObject>(C: IPoolObjectConstructor<T>, keyPrefix?: string, ...params: Array<unknown>): T {
+    public acquire<T extends IPoolObject>(C: IPoolObjectConstructor<T>, keyPrefix?: string, ...params: acquireParameters<T>): T {
         if (!C) return null;
 
         const poolKey = this.getPoolKey(C, keyPrefix);
@@ -54,7 +57,7 @@ export default class PoolMgr extends singleton<PoolMgr>() {
      * @param keyPrefix 可选参数 对象池key前缀，默认不传使用类名当key
      * @param params 回收时传入的动态参数
      */
-    public release<T extends IPoolObject>(obj: T, ...params: Array<unknown>): boolean {
+    public release<T extends IPoolObject>(obj: T, ...params: releaseParameters<T>): boolean {
         if (!obj) return false;
 
         const { poolObjects, maxPoolSize: maxSize } = this.getAddPoolData(obj.poolKey);
