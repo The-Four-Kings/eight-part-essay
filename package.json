@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "sort": "ts-node ./test/sort.ts",
-    "search": "ts-node ./test/search.ts",
+    "sort": "ts-node ./__tests__/sort.ts",
+    "search": "ts-node ./__tests__/search.ts",
     "select": "ts-node ./__tests__/select.ts",
     "struct": "ts-node ./__tests__/struct.ts",
     "ts-check": "tsc --noEmit",

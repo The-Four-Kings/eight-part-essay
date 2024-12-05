@@ -1,10 +1,12 @@
+/* eslint-disable no-console */
+
 import singleton, {
     Singleton
 } from '../../../src/design-patterns/creational-patterns/singleton/singleton';
 
-class Test_SingletonFn extends singleton<Test_SingletonFn>() { }
+class Test_SingletonFn extends singleton<Test_SingletonFn>() {}
 
-class Test_Singleton extends Singleton { }
+class Test_Singleton extends Singleton {}
 
 describe('singleton UNIT', () => {
 
@@ -20,3 +22,28 @@ describe('singleton UNIT', () => {
         expect(s1).toBe(s2);
     });
 });
+
+
+function SingletonA<T>() {
+    class C extends singleton<C & T>() {
+        protected constructor() {
+            super();
+        }
+
+        public testA() {
+            console.log("testA");
+        }
+
+    }
+
+    return C;
+}
+
+class SingletonB extends SingletonA<SingletonB>() {
+    public testB() {
+        console.log("testB");
+    }
+}
+
+SingletonB.ins.testA();
+SingletonB.ins.testB();
